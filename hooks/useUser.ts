@@ -6,11 +6,11 @@ import {
 
 import { userService } from "@/services/user/user.service";
 
-export const useUserDetail = (id: number) => {
+export const useUserDetail = (userId: string) => {
     return useQuery({
-        queryKey: ["user", id],
-        queryFn: () => userService.getUserDetail(id),
-        enabled: !!id,
+        queryKey: ["user", userId],
+        queryFn: () => userService.getUserDetail(userId),
+        enabled: !!userId,
     });
 };
 

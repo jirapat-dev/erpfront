@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 
 import QueryProvider from "@/providers/QueryProvider";
 
+import { Sidebar } from "@/components/sidebar";
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -32,7 +34,12 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <QueryProvider>
-          {children}
+          <div className="flex min-h-screen">
+            <Sidebar />
+            <main className="flex-1 p-6">
+              {children}
+            </main>
+          </div>
         </QueryProvider>
       </body>
     </html>

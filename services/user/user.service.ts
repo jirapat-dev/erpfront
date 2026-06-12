@@ -6,8 +6,8 @@ import {
 } from "@/types/user";
 
 export const userService = {
-    getUserDetail: async (id: number): Promise<User> => {
-        const response = await api.get(`/users/${id}`);
+    getUserDetail: async (userId: string): Promise<User> => {
+        const response = await api.get(`/users/${userId}`);
         return response.data;
     },
 
