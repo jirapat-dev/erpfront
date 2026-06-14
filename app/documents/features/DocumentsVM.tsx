@@ -75,7 +75,6 @@ export const DocumentsVM = () => {
                   }
                 : null;
       
-    // Debounce the search box; reset to page 1 when the term changes.
     useEffect(() => {
         const t = setTimeout(() => {
             setDebouncedSearch(search);

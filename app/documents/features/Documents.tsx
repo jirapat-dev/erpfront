@@ -185,7 +185,7 @@ export const Documents = () => {
                         <input
                             value={search}
                             onChange={(e) => onSearchChange(e.target.value)}
-                            placeholder="Search code…"
+                            placeholder="Search document code…"
                             className={`${inputClass} w-full pl-9`}
                         />
                     </div>
